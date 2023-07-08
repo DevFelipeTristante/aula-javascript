@@ -8,14 +8,11 @@
 </head>
 <body>
     <script>
-        var soma = 0
+        var numero = parseInt(prompt("Digite um número: "))
 
-        for(var n=0; n<4; n=n+1) {
-            var numero = parseInt(prompt("Digite um número: "))           
-            soma = soma + numero
+        for(var n=1; n<=numero; n=n+1) {     
+            alert("Números de 1 até " + numero + ": " + n)
         }
-
-        alert("A soma dos números é " + soma)
     </script>
 </body>
 </html>
