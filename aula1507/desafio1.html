@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resposta = "S"
+
+        while(resposta=="S") {
+            var num1 = parseFloat(prompt("Digite o primeiro número:")) 
+            var num2 = parseFloat(prompt("Digite o segundo número:"))
+        
+            var operacao = prompt("Qual operação matemática deseja realizar ? (adição, subtração, multiplicação, divisão)")
+
+            if (operacao=="adição") {
+                alert("A adição dos números é: " + (num1+num2))
+            } else if (operacao=="subtração") {
+                alert("A subtração dos números é: " + (num1-num2))
+            } else if (operacao=="multiplicação") {
+                alert("A multiplicação dos números é: " + (num1*num2))
+            } else if (operacao=="divisão") {
+                alert("A divisão dos números é: " + (num1/num2))
+            } else {
+                alert("Digite os números novamente e escolha uma operação disponível")
+            }
+
+            resposta = prompt("Deseja realizar outro calculo ? (S/N)")
+        }
+
+    </script>
+</body>
+</html>

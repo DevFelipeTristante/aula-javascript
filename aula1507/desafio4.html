@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resposta = 30
+
+        while(num!=resposta) {
+            var num = parseInt(prompt("Adivinhe o número secreto: "))
+
+            if (num<resposta) {
+                alert("Número digitado é menor que o secreto")
+            } else if (num>resposta) {
+                alert("Número digitado é maior que o secreto")
+            } else if (num==resposta) {
+                alert("Acertoooooooou!")
+            } else {
+                alert("Insira algum número")
+            }
+        }
+    </script>
+</body>
+</html>
