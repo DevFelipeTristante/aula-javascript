@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let matriz1 = [
+        //     [1, 2],
+        //     [2, 4]
+        // ]
+
+        // let matriz2 = []
+
+        // let linhaIndex = 0
+
+        // for (let linha of matriz1) {
+        //     let lista = []
+        //     let colunaIndex = 0
+        //     for (let elemento of linha) {
+        //         lista.push(elemento*2)
+        //         colunaIndex++
+        //     }
+        //     matriz2.push(lista)
+        //     linhaIndex++
+        // }
+
+        // console.log(matriz2)
+
+        var matriz = [
+            [2, 3, 4],
+            [4, 5, 6]
+        ]
+
+        var n = 10
+
+        var novaMatriz = []
+
+        for(var linha of matriz) {
+            var lista = []
+            for(var coluna of linha) {
+                lista.push(coluna*n)
+            }
+            novaMatriz.push(lista)
+        }
+        console.log(novaMatriz)
+    </script>
+</body>
+</html>

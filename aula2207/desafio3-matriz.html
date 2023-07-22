@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matriz = []
+
+        while(true){
+                    var nome = prompt("Insira o nome: ")
+                    var email = prompt("Insira o email: ")
+                    var telefone = prompt("Insira o telefone: ") 
+
+                    let linha = []
+                    linha.push(nome, email, telefone)
+                    
+                    matriz.push(linha)
+                    var continuar = parseInt(prompt("Deseja continuar ?(1-Sim / 0-Não)"))
+
+                    if(continuar==0){
+                        break
+                    }
+        }
+        console.log(matriz)
+    </script>
+</body>
+</html>
