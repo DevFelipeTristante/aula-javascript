@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var isPrime = function() {
+        //     var num = parseInt(prompt("Insira o número: "))
+        //     for (var i = 2; i < num; i++) {
+        //         if(num % i == 0) {
+        //             return console.log("O número não é primo")
+        //         } else {
+        //             return console.log("O número é primo")
+        //         }
+        //     }
+
+        //     return num !== 1;  
+        // }
+
+        // isPrime()
+
+        function verificaPrimo(num) {
+            var divide = 2
+
+            if(num <= 1) {
+                return "Não é primo"
+            }
+
+            while(divide < num ) {
+                if(num % divide === 0) {
+                    return "Não é primo"
+                }
+                divide = divide + 1
+            } 
+
+            return "É primo"
+        }
+    </script>
+</body>
+</html>

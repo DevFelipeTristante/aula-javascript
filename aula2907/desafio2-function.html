@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lista = []
+
+        function adicionarItem() {
+            while(true) {
+                var item = prompt("O que deseja adicionar?")
+
+                if(item==0) {
+                    break
+                }
+
+                lista.push(item)
+            }
+        }
+
+        adicionarItem(lista)
+
+        function exibirItem(lista) {
+            for(var item of lista) {
+                console.log(item)
+            }
+        }
+
+        exibirItem(lista)
+    </script>
+</body>
+</html>
