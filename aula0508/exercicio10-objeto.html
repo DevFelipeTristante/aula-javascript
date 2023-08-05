@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pessoas = [
+            {
+                nome: "Felipe",
+                idade: 19,
+            },        
+            {
+                nome: "José",
+                idade: 27
+            },
+            {
+                nome: "Luiz",
+                idade: 30
+            }
+        ]
+        var idadeMaior = 0
+        var nomeEscolhido = ""
+
+        var verificar = (pessoas) => {
+            for(valor in pessoas) {
+                if(pessoas[valor].idade > idadeMaior) {
+                    idadeMaior = pessoas[valor].idade
+                    nomeEscolhido = pessoas[valor].nome
+                }
+            }
+            console.log(nomeEscolhido)
+        }
+        verificar(pessoas)
+    </script>
+</body>
+</html>
