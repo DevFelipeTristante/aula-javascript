@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Curso Online | Aprenda Web Design Front-End</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        :root {
+            --cor: #8b0df2;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--cor);
+            color: #000;
+            display: flex;
+            height: 70px;
+            padding: 0 20px;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            flex: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #000;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        nav img {
+            display: none;
+        }
+
+        .hero {
+            background-image: url("./assets/front.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .hero-text p {
+            font-size: 30px;
+            margin-bottom: 40px;            
+            color: #000;
+            font-weight: bold;
+        }
+
+        .btn-hero {
+            background-color: #000;
+            color: var(--cor);
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-hero:hover {
+            background-color: var(--cor);
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        .about {
+            padding: 50px 20px;
+            background-color: var(--cor);
+        }
+
+        .about ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .about ul li {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .about li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline;
+        }
+
+        .pricing {
+            padding: 50px 20px;
+            background-color: #000;
+            color: var(--cor);
+        }
+
+        .pricing h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .pricing ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing li {
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: inline;
+        }
+
+        .pricing p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: right;
+        }
+
+        .btn-pricing {
+            background-color: #333;
+            color: var(--cor);
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-pricing:hover {
+            background-color: var(--cor);
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        footer {
+            background-color: var(--cor);
+            color: #000;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 320px) { 
+            :root {
+                --cor: #8b0df2;
+            }
+            
+            header nav ul li a {
+                display: none;
+            }
+
+            nav img {
+                display: block;
+            }
+            
+            .hero {
+                background-image: none;
+                background-color: #000;
+            }
+
+            .hero-text h2, .hero-text p{
+                font-size: 32px;
+                color: var(--cor);
+            }
+
+            .btn-hero {
+                background-color: #333;
+            }
+
+        }
+    </style>
+
+    <header>
+        <h1>Curso Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Conteúdo</a></li>
+                <li><a href="#">Preço</a></li>
+                <li><a href="#">Inscreva-se</a></li>
+                <li><img src="./assets/menu.png" alt=""></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Aprenda Web Design Front-End online</h2>
+            <p>Desenvolva suas habilidades com a ajuda de especialistas em Web Design Front-End.</p>
+            <a href="#" class="btn-hero">Inscreva-se agora</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Sobre o curso</h2>
+        <p>O curso é ministrado por profissionais experientes em Web Design Front-End. Nós fornecemos a você todo o
+            conhecimento e as habilidades necessárias para ter sucesso em sua carreira.</p>
+        <p>Nosso programa inclui:</p>
+        <ul>
+            <li>
+                <p>HTML</p> 
+                <img src="/assets/html.png" alt="">
+            </li>
+            <li>
+                <p>CSS</p> 
+                <img src="/assets/css.png" alt="">
+            </li>
+            <li>
+                <p>JS</p> 
+                <img src="/assets/js.png" alt="">
+            </li>
+            <li>
+                <p>Bootstrap</p> 
+                <img src="/assets/bootstrap.png" alt="">
+            </li>
+        </ul>
+    </section>
+
+    <section class="pricing">
+        <h2>Preços</h2>
+        <ul>
+            <li>Curso básico: R$ 30</li>
+            <li>Curso avançado: R$ 60</li>
+            <li>Curso completo: R$ 90</li>
+        </ul>
+        <p>Inscreva-se agora e obtenha 20% de desconto!</p>
+        <a href="#" class="btn-pricing">Inscreva-se agora</a>
+    </section>
+
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+
+</body>
+
+</html>

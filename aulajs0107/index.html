@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // =================== EXERCICIO 1 ===================
+        var num = parseInt(prompt("Digite um número"))
+
+        if (num % 2 === 0) {
+            alert("Número é par")
+        } else {
+            alert("Número é impar")
+        }
+        // ===================================================
+
+        // =================== EXERCICIO 2 ===================
+        var a = parseInt(prompt("Digite o primeiro número"))
+        var b = parseInt(prompt("Digite o segundo número"))
+
+        if (a > b) {
+            alert("O primeiro número é maior")
+        } else {
+            alert("O segundo número é maior")
+        }
+        // ===================================================
+
+        // =================== EXERCICIO 3 ===================
+        var ano = parseInt(prompt("Digite o seu ano de nascimento"))
+        var idade = 2023 - ano
+
+        if (idade >= 18) {
+            alert("Usuário é maior de idade")
+        } else {
+            alert("Usuário é menor de idade")
+        }
+        // ===================================================
+
+        // =================== EXERCICIO 4 ===================
+        var nota = parseInt(prompt("Insira a nota do estudante"))
+
+        if (nota >= 70) {
+            alert("Aprovado")
+        } else if (nota > 50){
+            alert("Recuperação")
+        } else {
+            alert("Reprovado")
+        }
+        // ===================================================
+
+        // =================== EXERCICIO 5 ===================
+        var dia = parseInt(prompt("Insira um número de 1 a 7"))
+
+        if (dia == 1) {
+            alert("Domingo")
+        } else if (dia == 2){
+            alert("Segunda-feira")
+        } else if (dia == 3){
+            alert("Terça-feira")
+        } else if (dia == 4){
+            alert("Quarta-feira")
+        } else if (dia == 5){
+            alert("Quinta-feira")
+        } else if (dia == 6){
+            alert("Sexta-feira")
+        } else if (dia == 7){
+            alert("Sabado")
+        } else {
+            alert("Insira apenas números de 1 a 7")
+        }
+        // ===================================================
+        
+    </script>
+</body>
+</html>

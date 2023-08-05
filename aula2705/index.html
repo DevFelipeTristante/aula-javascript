@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            grid-template-areas: "conteudo" "topo";
+            gap: 20px;
+        }
+
+        .topo {
+            background-color: blue;
+            color: white;
+            grid-area: topo;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conteudo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            grid-area: conteudo;
+        }
+
+        .vermelho {
+            background-color: red;
+        }
+
+        .verde {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="topo"></div>
+    <div class="conteudo">
+        <div class="vermelho"></div>
+        <div class="verde"></div>
+    </div>
+</body>
+</html>

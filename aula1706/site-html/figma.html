@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Figma</title>
+    <style>
+        .footer .zap p {
+            display: none;
+        }
+        @media (max-width:360px) {
+            .header {
+                display: flex;
+                justify-content: space-between;
+            }
+            .header nav ul li {
+                display: none;
+            }
+            .header nav {
+                background-image: url(./assets/img/Vector.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .secao-principal {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .secao-principal img {
+                width: 100%;
+            }
+            .beneficios {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .contato .imagem-dog {
+                display: none;
+            }
+            .contato {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .contato .textos {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            .contato .textos h3 {
+                font-size: 25px;
+                text-align: center;
+            }
+            .contato .textos p {
+                font-size: 18px;
+            }
+            
+            .form form label{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-bottom: -15px;
+            }
+            .form form input {
+                box-sizing: border-box;
+                width: 285px;
+                height: 39px;
+                background: #FFFFFF;
+                border: 1px solid rgba(0, 0, 0, 0.19);
+                box-shadow: 0px 8px 8px -5px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                margin-bottom: 24px;
+            }
+            .form form input[type="submit"] {
+                background-color: #EA1C81;
+                border-radius: 18px;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+            .footer .logo {
+                margin-top: 50px;
+            }
+            .footer .logo img {
+                width: 25%;
+            }
+            .footer .zap img{
+                display: none;
+            }
+            .footer .zap p {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/img/logo.png" alt="logo da empresa" class="logo">
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Benefícios</a>
+                </li>
+                <li>
+                    <a href="">Avaliação Grátis</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="secao-principal">
+            <img src="./assets/img/img_main.png" alt="imagem principal" class="imagem-principal">
+        </section>
+        <section>
+            <div>
+                <h3>Bem vindo</h3>
+                <p>Olá somos a Dog Dodói. Aqui você pode ter certeza de que seus bichinhos de estimação estão em boas mãos.
+                </p>
+            </div>
+            <div>
+                <p>Oferecemos tratamento veterinário especializado para animais de estimação. Nosso hospital está sempre disponível para cuidar do seu melhor amigo, pois estamos abertos 24 horas por dia, 7 dias por semana.
+                </p>
+            </div>  
+        </section>
+        <section class="beneficios">   
+            <div>
+                <h3>Nossos Benefícios</h3>
+                <p>Oferecemos serviços médicos e cirúrgicos para animais de estimação</p>
+            </div>
+            <div>
+                <img src="./assets/img/iconMedico.png" alt="icone medico">
+                <h3>Médicos Especializados</h3>
+            </div>
+            <div>
+                <img src="./assets/img/iconConsulta.png" alt="icone consulta">
+                <h3>Consultas em casa</h3>
+            </div>
+            <div>
+                <img src="./assets/img/iconSuporte.png" alt=" icone suporte">
+                <h3>Suporte ao paciente 24/7</h3>
+            </div>
+        </section>
+        <section class="contato">
+            <div class="imagem-dog">
+                <img src="./assets/img/dog.png" alt="foto de um cachorro">
+            </div>
+            <div class="textos">
+                <h3>Marque uma avaliação gratuita</h3>
+                <p>Consulte nossos veterinários profissionais hoje.</p>
+            </div>
+            <div class="form">
+                <form action="">
+                    <label for="">Seu Nome</label><br>
+                    <input type="text" name="nome">
+                    <br>
+                    <label for="">E-mail</label><br>
+                    <input type="email" name="email">
+                    <br>
+                    <label for="">Telefone</label><br>
+                    <input type="tel" name="telefone">
+                    <br><br>
+                    <input type="submit" value="Quero uma avaliação">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="logo">
+            <img src="./assets/img/logo.png" alt="logo da empresa">
+        </div>
+        <div class="numeros">
+            <p>(18) 99123-1234 / (18) 3636-3636</p>
+        </div>
+        <div class="zap">
+            <img src="./assets/img/iconZap.png" alt="icone do whatsapp">
+            <p>Rua Lorem Ipsum Nº 123, Centro - Birigui / SP</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 20px;
+    }
+
+    .d1 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .d111, .d112, .d113, .d114 {
+        background-color: blue;
+    }
+
+    .d112 {
+        margin-top: 10px;
+    }
+
+    .d113 {
+        margin-bottom: 10px;
+    }
+
+    .d2 {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 30px;
+    }
+
+    .d3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .d33 {
+        background-color: red;
+    }
+
+    .d4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .d5 {
+        background-color: rgb(47, 255, 113);
+    }
+
+    .d6 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .d7 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .d8 {
+        background-color: purple;
+    }
+
+    .d9 {
+        background-color: aquamarine;
+    }
+
+    .d10 {
+        background-color: brown;
+    }
+
+    .d11 {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+
+    .d12 {
+        background-color: gray;
+    }
+
+    .d13 {
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <div class="d111"></div>
+        <div class="d112"></div>
+        <div class="d113"></div>
+        <div class="d114"></div>
+    </div>
+    <div class="d2">
+        <div class="d3">
+            <div class="d33"></div>
+            <div class="d33"></div>
+            <div class="d33"></div>
+            <div class="d33"></div>
+        </div>
+        <div class="d4">
+            <div class="d5"></div>
+            <div class="d6">
+                <div class="d7">
+                    <div class="d8"></div>
+                    <div class="d9"></div>
+                </div>
+                <div class="d10"></div>
+            </div>
+        </div>
+        <div class="d11">
+            <div class="d12"></div>
+            <div class="d13"></div>
+        </div>
+    </div>
+</body>
+</html>

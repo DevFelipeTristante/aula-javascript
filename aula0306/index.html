@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .quadrado {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: relative;
+            animation-name: mudaCor;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes mudaCor {
+            0% {
+                background-color: red;
+                top: 0px;
+                left: 0px;
+            }    
+            25% {
+                background-color: blue;
+                left: 400px;
+                top: 0px;
+            } 
+            50% {
+                background-color: green;
+                top: 400px;
+                left: 400px;
+            }
+            75% {
+                background-color: yellow;
+                top: 400px;
+                left: 0px;
+            }
+            100% {
+                background-color: black;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado"></div>
+</body>
+</html>
