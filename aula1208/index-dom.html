@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .azul {
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Um título aqui</h1>
+    <p id="sub">Um texto aqui</p>
+    <a href="">Clique aqui</a>
+    <ul id="lista">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+    <script>
+        var paragrafo = document.getElementById("sub")
+        paragrafo.textContent = "Um novo texto alterado"
+
+        var item = document.querySelectorAll(".item")
+        
+        for(elemento of item) {
+            elemento.textContent = "Alterado"
+        }
+
+        paragrafo.style.color = "red"
+        paragrafo.style.fontSize = "40px"
+
+        var h1 = document.querySelector("h1")
+        h1.classList.add("azul")
+
+        var a = document.querySelector("a")
+        a.setAttribute("href", "https://google.com")
+
+        var novoLi = document.createElement("li")
+        novoLi.textContent = "Novo Elemento Li"
+
+        var ul = document.querySelector("#lista")
+        ul.appendChild(novoLi)
+
+        ul.removeChild(item[0])
+
+    </script>
+</body>
+</html>
