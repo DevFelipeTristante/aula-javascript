@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados com JQuery</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button>Sortear dados</button>
+  <a></a>
+  <div>
+    <img src="" alt="" id="image">
+  </div>
+
+  <script>
+    let max = 6
+    let min = 1
+    parseInt(max)
+    parseInt(min)
+    let num = Math.floor(Math.random() * (max-min+1)) + min 
+    $("button").on("click", function() {
+      $("#image").attr("src", "dado" + num + ".png")
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <style>
+    .ativo{
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- <button id="btn">Clique Aqui</button> -->
+  <!-- <button >Clique Aqui</button> -->
+  <label>Digite seu peso:</label>
+  <input id="peso">
+
+  <br>
+
+  <label>Digite sua altura:</label>
+  <input id="altura">
+
+  <br>
+
+  <button id="calcular">Calcular</button>
+
+  <h2 id="resultado"></h2>
+
+
+  <script>
+    // $("#btn").on("click", function() {
+    // $("button").on("click", function() {
+    //   $("h1").css("color", "green")
+    //   $("h1").animate({
+    //     color: "blue",
+    //     fontSize: "150px",
+    //   }, "slow", function() {
+    //     // $("h1").html("Novo Texto")
+    //     $(this).html("Novo Texto")
+    //   })
+    //   $(this).html("Você clicou")
+    // })
+    // $("button").on("click", function() {
+    //   $(this).addClass("ativo")
+    // })
+    $("#calcular").on("click", function() {
+      let peso = $("#peso").val()
+      let altura = $("#altura").val()
+
+      altura = parseFloat(altura)
+      peso = parseFloat(peso)
+
+      let imc = peso/(altura * altura)
+
+      $("#resultado").html("Seu IMC é: " + imc.toFixed(2))
+    })
+  </script>
+</body>
+</html>
