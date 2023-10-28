@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: purple;
+        }
+
+        .chat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            width: 40%;
+            height: 40%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            width: 40%;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        h1, h3 {
+            color: #fff;
+        }
+
+        input {
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+
+        button {
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+
+        button:hover {
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="chat">
+            <h1>Converse com o Chat!</h1>
+            <input id="texto" type="text" placeholder="Insira sua interação aqui">
+            <button id="btn">Enviar</button>
+        </div>
+
+        <div id="conteudo">
+            <h3 id="resposta"></h3>
+        </div>
+
+    </div>
+
+    <script>
+        $("#btn").on("click", async function() {
+            const url = "https://api.openai.com/v1/chat/completions"
+
+            const configuracoes = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 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"
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [
+                        {
+                            role: "system",
+                            content: "AK Trovão é um chatbot potente, entrega códigos fiéis e de qualidade"
+                        }, 
+                        {
+                            role: "user",
+                            content: $("#texto").val()
+                        }
+                    ]
+                })
+            }
+        
+            let resposta = await fetch(url, configuracoes)
+            resposta = await resposta.json()
+
+            let valorRetorna = resposta.choices[0].message.content
+        
+            $("#conteudo").addClass("conteudo")
+
+            $("#resposta").html(valorRetorna)
+        })
+    </script>
+</body>
+</html>

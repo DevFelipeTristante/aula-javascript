@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <label>Idioma Atual:</label>
+        <select id="idiomaAtual">
+            <option value="pt-br">Português do Brasil</option>
+            <option value="en">English</option>
+            <option value="es">Espanhol</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Idioma Traduzir:</label>
+        <select id="idiomaTraduzir">
+            <option value="pt-br">Português do Brasil</option>
+            <option value="en">English</option>
+            <option value="es">Espanhol</option>
+        </select>
+    </div>
+
+    <textarea id="texto" placeholder="Seu texto aqui..."></textarea>
+
+    <button id="btn">Traduzir</button>
+
+    <p id="resultado"></p>
+
+
+    <script>
+
+        const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
+
+        $("#btn").on("click", async function() {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Accept-Encoding': 'application/gzip',
+                    'X-RapidAPI-Key': '81783cde72msh2be709b03fff499p13a8fejsna258dce53ac8',
+                    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                },
+                body: new URLSearchParams({
+                    q: $("#texto").val(),
+                    target: $("#idiomaTraduzir").val(),
+                    source: $("#idiomaAtual").val()
+                })
+            };
+
+            const response = await fetch(url, options);
+            const result = await response.json();
+            console.log(result.data.translations[0].translatedText);
+        })
+
+    </script>
+</body>
+</html>

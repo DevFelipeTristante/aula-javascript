@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Dado</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #dado-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+
+        }
+
+        #dado {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+        }
+
+        #jogar-dado {
+            width: 100px;
+            border-radius: 10px;
+            background-color: yellow;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border: 1px solid black;
+
+        }
+
+        #jogar-dado:hover {
+            cursor: pointer;
+            color: yellow;
+            background-color: black;
+            border: 1px solid yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button id="jogar-dado">Jogar um Dado</button>
+        <div id="dado-container">
+            
+        </div>
+    </div>
+    <script>
+        $("#jogar-dado").on("click", function () {
+            $("#dado-container").html(`<iframe src="https://giphy.com/embed/ckHAdLU2OmY7knUClD" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mama-machinegun-machine-gun-ckHAdLU2OmY7knUClD">via GIPHY</a></p>`)
+
+            var valor = Math.floor(Math.random() * 6) + 1;
+
+            setTimeout(function () {
+                $("#dado-container").html(`<img id="dado" src="" />`)
+
+                $("#dado").attr("src", "dado" + valor + ".png");
+                
+                setTimeout(function () {
+                    $("#dado-container").html(``)
+                }, 2000)
+            }, 2000)
+
+
+            
+
+        });
+    </script>
+</body>
+
+</html>
